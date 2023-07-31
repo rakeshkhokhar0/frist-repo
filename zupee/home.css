@@ -1,0 +1,641 @@
+
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav.navbar {
+    background-color: #fddc06f2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+div.navbox {
+    display: block;
+    margin: auto;
+}
+
+div.inner-first {
+    background-color: #fddc06f2;
+    display: flex;
+    padding: 3vw 0;
+}
+div.winning-block{
+    background-color:  #fddc06f2;
+    padding: 1vw;
+}
+div.inner-box-winning{
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+div.winner-head{
+    text-align: center;
+    margin: 1.5vw 0;
+}
+div.services-by-zupee{
+    display: flex;
+    width: 100%;
+    padding: 2vw 0;
+}
+div.review{
+    display: block;
+    padding: 3vw;
+}
+div.review-block{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+div.rating-block{
+    display: block;
+    width: 100%;
+    margin: 1vw 0;
+    text-align: center;
+}
+div.steps-block{
+    background-color:  #fddc06f2;
+    padding: 2vw 0;
+}
+.font{
+    font-family: 'Times New Roman', Times, serif;
+}
+div.zupee-online-money{
+    background-color: white;
+}
+div.question-asked{
+    background-color: rgb(206, 213, 213);
+    padding: 2vw 0;
+}
+footer{
+    background-color: #15016ee7;
+    color: rgb(255, 253, 253);
+}
+@media all and (max-width: 792px) {
+    div.navbox {
+        width: 90%;
+    }
+
+    div.navbarbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div.navbar-brand a img {
+        width: 20vw;
+        height: 7vw;
+    }
+
+    div.navbar-list {
+        display: none;
+    }
+
+    /* 
+div.navbar-list-icon{
+    position: relative;
+}
+div.navbar-list-s{
+    position: absolute;
+    right: 0;
+    width: 100%;
+} */
+}
+
+@media all and (min-width: 792px) {
+    div.navbox {
+        padding: 1vw;
+        width: 80%;
+    }
+
+    div.navbar-brand a img {
+        width: 10vw;
+        height: 4vw;
+    }
+
+    .text {
+        text-decoration: none;
+        color: rgb(89, 3, 170);
+        font-weight: 800;
+        font-size: 1.5vw;
+    }
+
+    div.navbar-list-icon {
+        display: none;
+    }
+
+    div.navbarbox {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.navbar-list {
+        display: flex;
+        align-items: center;
+    }
+
+    div.navbar-list-items {
+        margin: 0 1vw;
+    }
+
+    div.dropdown {
+        background-color: #fddc06f2;
+        width: 20vw;
+        display: none;
+        margin-top: 1vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw #0a0a0af2;
+        position: absolute;
+    }
+
+    button.dropdown-menu {
+        position: relative;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    div.dropdown-item {
+        padding: 0.5vw;
+    }
+
+    div.dropdown-item:hover {
+        background-color: #cdb307f2;
+    }
+
+    div.download-games {
+        display: block;
+        width: 50%;
+        padding: 5vw;
+    }
+
+    div.download {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    div.download-head {
+        font-size: 3vw;
+        color: rgb(89, 3, 170);
+        font-weight: 600;
+        width: 80%;
+        margin: 1vw 0;
+    }
+
+    div.download-line {
+        margin: 1vw 0;
+        font-size: 1.5vw;
+    }
+
+    div.download-app {
+        margin: 2vw 0;
+    }
+
+    .buttonDownload {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        padding: 1vw 7vw;
+        background-color: rgb(89, 3, 170);
+        color: white;
+        font-family: sans-serif;
+        text-decoration: none;
+        border-radius: 5vw;
+        font-size: 2vw;
+        text-align: center;
+        text-indent: 15px;
+        border: none;
+    }
+
+    .buttonDownload:hover {
+        background-color: rgb(89, 3, 170);
+        color: white;
+    }
+
+    .buttonDownload:before,
+    .buttonDownload:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 6.5vw;
+        top: 52%;
+    }
+
+    .buttonDownload:before {
+        width: 10px;
+        height: 2px;
+        border-style: solid;
+        border-width: 0 2px 2px;
+    }
+
+    .buttonDownload:after {
+        width: 0;
+        height: 0;
+        margin-left: 3px;
+        margin-top: -7px;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        border-color: transparent;
+        border-top-color: inherit;
+        animation: downloadArrow 1s linear infinite;
+        animation-play-state: paused;
+    }
+
+    .buttonDownload:hover:before {
+        border-color: #fccff9;
+    }
+
+    .buttonDownload:hover:after {
+        border-top-color: #e7d0ed;
+        animation-play-state: running;
+    }
+
+    @keyframes downloadArrow {
+        0% {
+            margin-top: -7px;
+            opacity: 1;
+        }
+
+        0.001% {
+            margin-top: -15px;
+            opacity: 0.4;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            margin-top: 0;
+            opacity: 0.4;
+        }
+    }
+
+    div.download-quantity {
+        display: flex;
+        margin: 1vw 0;
+        font-size: 1.5vw;
+        color: rgb(89, 3, 170);
+        font-weight: 800;
+    }
+
+    div.download-number {
+        padding: 0 1vw 0 0;
+    }
+
+    div.download-number span img {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    div.ads-image{
+        display: block;
+        width: 40%;
+    }
+    div.image-inner{
+        width: 100%;
+    }
+    div.image-inner img{
+        width: 100%;
+        height: auto;
+    }
+    div.inner-second{
+        background-color: white;
+        display: block;
+        width: 100%;
+    }
+    div.inner-second-block{
+        display: block;
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        padding: 5vw 0;
+    }
+    div.text1{
+        font-size: 2.5vw;
+        color: rgb(89, 3, 170);
+        font-weight: 900;
+        font-family: cursive;
+    }
+    div.inner-second-block-line{
+        margin: 1vw 0;
+    }
+    .text2{
+        font-size: 1.5vw;
+        font-weight: 300;
+        text-decoration: none;
+    }
+    a.text2{
+        color: rgb(89, 3, 170);
+        font-weight: 500;
+    }
+    div.games-block{
+        width: 100%;
+        margin: 3vw 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div.game{
+        width: 25%;
+        height: auto;
+        display: block;
+    }
+    div.game-block{
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+    div.game-frist-child{
+        width: 60%;
+        height: auto;
+    
+    }
+    div.game-first-child img{
+        width: 100%;
+        height: auto;
+    }
+    div.game-last-child{
+        margin: 0.5vw 0;
+    }
+    div.game-contanier{
+        display: flex;
+        background-color: white;
+        padding: 2vw;
+        height: auto;
+    }
+    div.download-game-name{
+        padding: 6vw;
+    }
+    div.game-image{
+        display: block;
+        width: 50%;
+        height: auto;
+    }
+    div.game-image-inner{
+        width: 100%;
+        height: auto;
+    }
+    div.game-image-inner img{
+        width: 100%;
+        height: auto;
+    }
+    div.withdrawals{
+        width: 15%;
+        margin:  1.5vw;
+    }
+    div.withdrawals img{
+        width: 100%;
+    }
+    div.rating-head{
+        margin: 1vw 0;
+    }
+    div.rating-line{
+        margin: 1vw 0;
+    }
+    div.review-image{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding: 1vw 0;
+    }
+    div.review-image img{
+        width: 80%;
+        height: auto;
+    }
+    div.review-block-inner{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    div.review-block-inner-user{
+        background-color: yellow;
+        display: block;
+        border-radius: 1vw;
+        width: 30%;
+        height: 35vw;
+    }
+    div.about-review-user{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        height: 20%;
+    }
+    div.user-info{
+        width: 20%;
+        box-sizing: border-box;
+        margin: 3% 5%;
+    }
+    div.user-info img{
+        width: 100%;
+        border: 0.5vw solid wheat;
+        border-radius: 50%;
+    }
+    div.user-name{
+        font-size: 1.3vw;
+        font-family: cursive;
+        color:  rgb(89, 3, 170);
+    }
+    div.user-review{
+        background-color: white;
+        margin: 0 0.5vw;
+        box-sizing: border-box;
+        padding: 0.5vw;
+        height: 75%;
+    }
+    .text3{
+        font-size: 1.5vw;
+        font-weight: 500;
+    }
+    div.steps-block-header{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    div.steps-header{
+        text-align: center;
+        margin: 1vw 0;
+    }
+    div.steps-inner-line{
+        text-align: center;
+        margin: 1vw 0;
+    }
+    div.download-steps-video{
+        display: block;
+        margin: auto;
+        width: 40%;
+        padding: 1vw 0;
+    }
+    div.download-steps-video video{
+        width: 100%;
+        height: auto;
+    }
+    div.steps-of-download{
+        text-align: center;
+        margin: 0 0 1vw 0;
+    }
+    div.steps-download ol li{
+        margin: 1vw 0;
+    }
+    div.zupee-online-money-inner{
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    div.online-money-top{
+        margin: 2vw 0;
+    }
+    div.online-money-header{
+        text-align: center;
+        margin: 1vw 0;
+    }
+    div.list-head{
+        margin: 1vw 0;
+    }
+    div.online-money-list ul li{
+        margin: 0.4vw 0;
+    }
+    div.online-money-bottom{
+        margin: 5vw 0;
+    }
+    div.zupee-members-of{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1vw 0;
+        padding: 2vw 0;
+        width: 100%;
+    }
+    div.members{
+        width: 25%;
+        display: block;
+    }
+    div.members img{
+        width: 80%;
+        display: block;
+        margin: auto;
+        height: auto;
+    }
+    div.question-inner{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    div.question-head{
+        text-align: center;
+        margin: 1vw 0;
+    }
+    div.questions-block{
+        display: block;
+        width: 100%;
+        margin: 1vw 0;
+    }
+    div.question{
+        display: block;
+        width: 98%;
+        margin: auto;
+        padding: 0.2vw 0;
+    }
+    div.question button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.2vw 0;
+        padding: 0 1vw 0 0;
+    }
+    .text4{
+        font-size: 1.2vw;
+        font-weight: 600
+    }
+    div.answer{
+        display: none;
+        width: 100%;
+        transition: 2s all;
+    }
+    .text5{
+        font-size: 1.2vw;
+        font-weight: 400;
+    }
+    div.footer{
+        display: block;
+        width: 80%;
+        margin: auto;
+        padding: 2vw 0;
+    }
+    div.company-info{
+        display: flex;
+        width: 100%;
+    }
+    div.footer-company-box{
+        width: 25%;
+    }
+    .text7{
+        font-size: 2vw;
+        font-weight: 500;
+    }
+    div.footer-head{
+        margin: 1vw 0;
+    }
+    div.text6{
+        margin: 1vw 0;
+    }
+    div.text6 a{
+        text-decoration: none;
+        color: rgb(182, 178, 178);
+        font-size: 1.2vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    div.partner-image{
+        width: 100%;
+        margin: 1vw 0;
+        height: auto;
+    }
+    div.partner-image img{
+        width: 60%;
+        height: auto;
+    }
+    div.zupee-info{
+        display: block;
+        margin: auto;
+        width: 40%;
+        padding: 2vw 0;
+    }
+    div.footer-logo{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    div.footer-logo a{
+        margin: 2vw 0;
+    }
+    div.footer-logo a img{
+        width: 60%;
+    }
+    div.social-media{
+        display: flex;
+        width: 60%;
+        margin:  2vw 0 1vw 2vw;
+    }
+    div.social{
+        width: 25%;
+
+    }
+    div.social a{
+        width: 80%;
+    }
+    div.social a img{
+        width: 80%;
+    }
+    div.about-makers{
+        display: block;
+        width: 60%;
+        margin: 2vw 0 1vw 2vw;
+    }
+    div.makers{
+        font-size: 1.5vw;
+    }
+}

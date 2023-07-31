@@ -1,0 +1,45 @@
+div.ludo-box{
+    background-color: rgb(207, 222, 234);
+    padding: 2vw 0;
+}
+div.ludo-box-inner{
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 1vw 0;
+}
+div.ludo-box-inner-box{
+    display: block;
+    width: 100%;
+    margin: 3vw 0;
+}
+div.ludo-box-inner-head{
+    text-align: center;
+    margin: 3vw 0;
+}
+div.hr{
+    width: 100%;
+    border:  1px solid black;
+}
+div.ludo-box-discriptio{
+    width: 100%;
+    margin: 1vw 0;
+}
+div.ludo-box-text{
+    color: black;
+    font-size: 1.5vw;
+    margin: 1vw 0;
+}
+.ludo-list{
+    font-size: 1.2vw;
+    color: black;
+    margin: 0.5vw;
+}
+.ludo-list li{
+    margin: 1vw;
+}
+div.ludo-question{
+    background-color: white;
+    display: block;
+    padding: 5vw;
+}

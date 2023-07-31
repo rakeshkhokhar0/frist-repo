@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack And Ladders</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="ludo.css">
+</head>
+<body>
+    <div class="zuppe">
+        <div class="container-zupee">
+            <nav class="navbar">
+                <div class="navbox">
+                    <div class="navbarbox">
+                        <div class="navbar-brand">
+                            <a href="home.html">
+                                <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/logo.png"
+                                    alt="logo">
+                            </a>
+                        </div>
+                        <div class="navbar-list-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor"
+                                    class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                            </a>
+                            <!-- <div class="navbar-list-s">
+                                <div class="navbar-list-item-s">
+                                    <img src="data:image/webp;base64,UklGRjoDAABXRUJQVlA4WAoAAAAQAAAAIQAAIQAAQUxQSHEAAAABb2CQbeTcj2BDeJOLiLgaIvsEbmrbdqJL1JBKOjxkBUjAAgKQgIIMPRPK6CKHJ2f+baeM6P8EANVBfrcBgOIjqqsBPES9RiqsvVD+lWpeVP+hLvKH/VCXF9U/qWj/ZcJSWANPogHSt9LFBpAfFFoHAABWUDggogIAAFANAJ0BKiIAIgA+kUKXSKWkIiEuO/gAsBIJbACdMyX8r655kVGfnusImGsK8+Z0ZLtm3maZJviammdWuAlVjdbqCB4WANIEeS8KqFVBmCGCmUhfei64SoHoT8Qq5SDaKLos4ZwyXN33pWxoY8tAXn5IP2gA/veh7+GH+i6BizgbKEDhbHRxBua4TH8MsmJ+FhhL6rxd9NwK2HT/u+AbnEI+8Dke00/4umNvZ0We/wy8+yZLN0GzzX8yituQtY3/skWt8HKcIrV7tZC9pl+2QSPyNu+/4yonDv5G9EzRH9XmkZo1zOKlunYrG6O7kxEOam9Nht7bQANjtWkZ6LbEjx3FVuPwWxd5uhvY2nhK6i+Ib/C8M9uF91XG1hVVzWo6y2UIFbhWhYUdRQWOmCcIIXh5AfdXTN3+dt088+8vjjzPugIHBRDr15EjVcHWuCg3As7ZrxG795WvzdYVSi6RVzvOOOSTO1tyF4rcQRaO9Qlxc7LxtW5uckCEQXLGMVoAJb8RclvLz+t+9suUyn4MdjZSgUZ4FdIIAlsJu+/ZB2ZSpI+ODEr2v9af8e/v0ez/wCDli115LTSJXbUj3kLJFisjD42D3YlrcCpIdt9Z3besCr0btT9fcL55XuMQC4fR9SVDNn5Qny267jbvln2AYZ3o3OHFOjTNx7Ga77WdDuqNyLE39dBv9LUWiPv0P0R4QnzDJgSIFXNDn+TjBNdOTeHRk/4/a70UGbrEbaK6T5wnGICjdUvd7rdB5RsyceHquaBYS9aCiicG3isXwOIEB1YxNGkzlqEOFaae+HDtOmy/NQQPaQZq9q6zjX5iNVJM3T7sEcdGibkBWI/CZz2jYSV9zI3pl2MlwSv2Zy1dB8t032Z399vPSwGOKaOkaREsAAAA" alt="ludo supreme">
+                                    <a href="#" class="text">LUDO SUPREME</a>
+                                 </div> -->
+                            <!-- <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                            </div> */ -->
+                        </div>
+                        <div class="navbar-list">
+                            <div class="navbar-list-items">
+                                <button class="text dropdown-menu" onclick="myDisplay()">
+                                OUR GAMES<span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="rgb(89, 3, 170)" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                        </svg></span>
+                                </button>
+                                <div class="dropdown" id="display">
+                                    <div class="dropdown-item"><a href="ludosupreme.html" class="text">LUDO SUPREME</a></div>
+                                    <div class="dropdown-item"><a href="ludoninja.html" class="text"">LUDO NINJA</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="ludoTurbo()">LUDO TURBO</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="snakeLadders()">SNAKE AND LADDERS PLUS</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="trumpCard()">TRUMP CARD MANIA</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="ludoLeague()">LUDO SUPREME LEAGUE</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="cricketX()">ZUPEE CRICKET X TAMBOLA</a>
+                                    </div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="cricketCard()">ZUPEE CRICKET CARDS</a></div>
+                                </div>
+                            </div>
+                            <div class="navbar-list-items"><a href="#" class="text">ABOUT US</a></div>
+                            <div class="navbar-list-items"><a href="#" class="text">F&Qs</a></div>
+                            <div class="navbar-list-items"><a href="#" class="text">BLOG</a></div>
+                            <div class="navbar-list-items"><a href="#" class="text">CONTACT US</a></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="game-contanier" id="snakeladder">
+                <div class="download-games download-game-name">
+                    <div class="download">
+                        <div class="download-head">
+                            <div>Play Snakes and Ladders online</div>
+                        </div>
+                        <div class="download-line">
+                            <div>Play Snakes and Ladders online on Zupee and win real money. Gameplay time less than 10mins!</div>
+                        </div>
+                        <div class="download-app">
+                            <button class="buttonDownload">Download App</button>
+                        </div>
+                        <div class="download-quantity">
+                            <div class="download-number">
+                                <span><img
+                                        src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/Download.webp"
+                                        alt=""></span>
+                                2Cr+ Downloads
+                            </div>
+                            <div class="download-number">
+                                <span><img
+                                        src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/crown.webp"
+                                        alt=""></span>
+                                ₹10 Cr+ Daily cash winnings
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <div class="game-image-inner">
+                        <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/Snake-and-ladders-plus-banner1.webp"
+                        alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="winning-block">
+                <div class="inner-box-winning">
+                    <div class="winner-head">
+                        <div class="text1">Ludo Online Games: Advantages</div>
+                    </div>
+                    <div class="services-by-zupee">
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/play-games-win-money-instant-withdrawals.png" alt="instant withdwrawals">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/zupee-games-legal-and-secure.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/cashback-referral-zupee.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/play-zupee-games-online-24-7.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/rng-certified-dice-game.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/best-gaming-experience-customer-support.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-block">
+                    <div class="rating-block">
+                        <div class="rating-head">
+                            <div class="text1">Snakes and Ladders Plus Reviews</div>
+                        </div>
+                        <div class="rating-line">
+                            <div class="text2">Download the online Snakes and Ladders Plus game and win real cash! </div>
+                        </div>
+                        <div class="review-image">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/best-real-money-earning-game-ratings.png" alt="rating">
+                        </div>
+                    </div>
+                    <div class="review-block-inner">
+                        <div class="review-block-inner-user">
+                            <div class="about-review-user">
+                                <div class="user-info">
+                                    <img src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/zupee-winner-ravi.png" alt="user 1">
+                                </div>
+                                <div class="user-name">
+                                    <div>RAVI</div>
+                                </div>
+                            </div>
+                            <div class="user-review">
+                                <div class="text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error architecto adipisci laudantium saepe temporibus, ex officia corrupti minima accusamus voluptas ipsam ratione aliquam, totam voluptatum sunt commodi! Molestias, mollitia vero.</div>
+                            </div>
+                        </div>
+                        <div class="review-block-inner-user">
+                            <div class="about-review-user">
+                                <div class="user-info">
+                                    <img src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/zupee-winner-anirudh-singh.png" alt="user 1">
+                                </div>
+                                <div class="user-name">
+                                    <div>ANITUDH SINGH</div>
+                                </div>
+                            </div>
+                            <div class="user-review">
+                                <div class="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi itaque perspiciatis aliquam sit fuga facilis corporis, ipsa dolore iusto nihil vero, provident nobis magnam voluptates quis ab deleniti consequatur cum sunt optio fugit eligendi ullam reprehenderit. Reprehenderit doloribus laborum quasi, facilis quisquam, dolores ipsum quis perferendis minus illo voluptas dignissimos!</div>
+                            </div>
+                        </div>
+                        <div class="review-block-inner-user">
+                            <div class="about-review-user">
+                                <div class="user-info">
+                                    <img src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/zupee-winner-aparna.png" alt="user 1">
+                                </div>
+                                <div class="user-name">
+                                    <div>APARNA</div>
+                                </div>
+                            </div>
+                            <div class="user-review">
+                                <div class="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nisi earum aspernatur dicta, voluptates illum itaque quis rem quos quas aliquid hic molestias ad et. Minima totam, dolores ullam alias expedita numquam maxime dignissimos eaque nisi esse, eligendi quidem nihil.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-block">
+                <div class="steps-block-header">
+                    <div class="steps-header">
+                        <div class="text1">Ludo Online: How to download Ludo supreme?</div>
+                    </div>
+                    <div class="steps-inner-line">
+                        <span class="text2">Download Zupee to play Ludo Supreme, aka Ludo Supreme Gold. </span> <a href="#" class="text2"> Ludo Money APK</a> <span class="text2">and iOS versions are available. Watch the video to learn how to install & play Ludo</span><a href="" class="text2"> Ludo</a><span class="text2"> Online:</span>
+                    </div>
+                    <div class="download-steps-video">
+                        <video controls>
+                            <source src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/HowtoInstall_Zupee-Ready-English.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="steps-of-download">
+                        <div class="text1">Steps to download Ludo Supreme Gold  </div>
+                    </div>
+                    <div class="steps">
+                        <div class="steps-download">
+                            <div class="text2 font">Here are the steps to download <a href="" class="text2">Ludo game online:</a></div>
+                            <ol type="1" class="text2 font"> 
+                                <li>Click the “Download App” button on this page.</li>
+                                <li>Tap Ok on the general warning. 1cr+ players in India play <a href="" class="text2">online Ludo games</a> on Zupee. It is 100% secure and safe.</li>
+                                <li>Check phone notifications to locate the app OR go to “My files &hyphen;> Downloads folder”.</li>
+                                <li>Install, register, and select the Ludo supreme online game. </li>
+                                <li>Select a ludo online game format &hyphen; 1 vs. 1, 1 winner, 2 winners, 3 winners.</li>
+                                <li>Play with or without an entry fee.</li>
+                                <li>The player with the maximum points wins real ludo money.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ludo-box">
+                <div class="ludo-box-inner">
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">Ludo Games Online </div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">
+                                Ludo is generally played between 2-4 players on a 4×4 square board. With the advancement in technology, you can now play Ludo online and win real money.
+                            </div>
+                            <div class="ludo-box-text">Besides, whether you play Ludo online or offline, the game's objective is to move the player's tokens clockwise around the board, up the home column, and into the Home. However, you must strategize your moves depending on the ludo game rules and gameplay.</div>
+                            <div class="ludo-box-text">Zupee is one of the best Ludo money apps, with 4 types of online Ludo games &hyphen; Ludo Supreme, Ludo Supreme League, Ludo Ninja, and Ludo Turbo.</div>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">How to play Ludo online?</div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">To play ludo online multiplayer game on Ludo Supreme, aka Ludo Supreme Gold follow these points:</div>
+                            <ul class="ludo-list">
+                                <li>Choose the Ludo online game format: 1vs1, 1 winner, 2 winners, and 3 winners.</li>
+                                <li>Play Online tournaments With/ Without an entry fee. You can win more Ludo money in the entry fee tournament.</li>
+                                <li>Tap the ludo dice online. You don't need a 6 to start playing. All tokens are in the open position.</li>
+                                <li>Every box moved = 1 point. For each Ludo token that you take home, you earn extra 56 points.</li>
+                                <li>Win the Online Ludo game by earning maximum points, within a limited timeframe. Learn Ludo online tricks to win.</li>
+                                <li>A 2-player ludo online game lasts for 8 minutes, and a 4-player game for 10 minutes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">Ludo Online: Rules on Ludo Supreme </div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">Ludo Supreme gold rules are slightly different from the classic Ludo game rules:</div>
+                            <ol class="ludo-list">
+                                <li>To play ludo online, no need to roll a 6 to start playing.</li>
+                                <li>Roll a 6, to get an extra turn.</li>
+                                <li>If you roll 6 three times consecutively, you will have to miss a turn.</li>
+                                <li>If you land on a safe box, the opponent's online Ludo token can't cut you.</li>
+                                <li>If an opponent's token lands on your token, your token will be sent back to the start point, and all points made on that token will be lost too.</li>
+                                <li>If you skip your turn more than twice, you lose the online ludo game.</li>
+                                <li>If you don't play your turn within 10 seconds, you skip your turn.</li>
+                                <li>If an opponent's token lands on the same box as yours, you'll lose all the points gathered by that token.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">Online Ludo Games: Facts </div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">Here are some of the facts about the Ludo game that we bet you didn't know:</div>
+                            <ul class="ludo-list">
+                                <li>Ludo is a Latin word that means 'I play.'</li>
+                                <li>All numbers on the opposite side of a Ludo dice add up to 7. Go check it! </li>
+                                <li>You can play Ludo online without a dice! </li>
+                                <li>The track of every color on the ludo board consists of 52 squares around the home area. 48 of these squares are white, and only four are of different colors. </li>
+                                <li>Akbar was a big fan of the game. So much so that he had separate courts built to just play Ludo.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ludo-question">
+                <div class="question-inner">
+                    <div class="question-head">
+                        <div class="text1">Ludo Game Online: FAQs </div>
+                    </div>
+                    <div class="questions-block">
+                        <div class="question">
+                            <button onclick="myQuestion1()"><div class="text4">Can I play Ludo online and win money? </div>
+                            <div id="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                              </svg></div>
+                            </button>
+                            <div class="answer" id="answer1">
+                                <div class="text5">
+                                    Yes. You can play Ludo online on Ludo Supreme, aka Ludo Supreme gold , and stand a chance to win real money by playing less than 10mins games. You can play the game for free or participate in cash tournaments. Learn how to play Ludo Supreme on Android and iOS mobile phones.
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion2()">
+                                <div class="text4">Can I withdraw online Ludo money?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer2">
+                                <div>Yes. You can easily withdraw Ludo online winnings from Ludo Supreme game. Log in to your Ludo Supreme account and click on the “Withdraw” option. Fill in the required details, such as bank details, UPI ID, and the amount you want to withdraw. Once you click “Withdraw,” the funds will be transferred to your account.</div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion3()">
+                                <div class="text4">
+                                    Is it safe to play Ludo online games? 
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer3">
+                                <div>
+                                    Yes, it is generally safe to play online ludo games. Legitimate online ludo games use secure payment systems to protect your information and provide good customer service. Learn about how online ludo games ensure Fairplay.
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion4()">
+                                <div class="text4">How many players can play Ludo online game?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer4">
+                                <div>
+                                    In total, 2-4 players can play the ludo online game on Ludo Supreme. There are four online ludo gameplay formats that you can choose from – 1vs1, 1 winner, 2 winners, and 3 winners.
+
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion5()">
+                                <div class="text4">How to win Ludo Online game? </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer5">
+                                <div>
+                                    To win online ludo games on ludo supreme, you need to follow the game rules and score a maximum number of points. The player or players (in case of 2 or 3 winners) with the most points at the end of the time limit wins the prize pot. Learn about 15 Ludo online game tricks to always win the game.
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion6()">
+                                <div class="text4">Can I play online Ludo games for free?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer6">
+                                <div>
+                                    Yes. On Ludo supreme, you can choose to play ludo online games without paying any entry fee.
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion7()">
+                                <div class="text4">What is Ludo Supreme Gold?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer7">
+                                <div>
+                                    Ludo Supreme is also referred to as Ludo Supreme Gold. Both games are similar. The process to download the Ludo supreme gold is similar to Ludo supreme. 
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion8()">
+                                <div class="text4">Is it safe to add money to Ludo supreme online wallet?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer8">
+                                <div>
+                                    Yes, adding ludo money to your wallet is safe. We have partnerships with the industry’s best, who ensure smooth and safe money transactions. You can add money using UPI, Bank account, Wallets, or Debit/Credit cards.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer">
+                    <div class="company-info">
+                        <div class="about-zupee-services footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Zupee
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="text6">
+                                    <a href="#">About Us</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">RNG Certification</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">AIGF Skill Certificate</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Privacy Policy</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Terms & Conditions</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Responsible Gaming</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Fair Play</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Blog</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Careers</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="games-of-zupee footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Our Games
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="text6">
+                                    <a href="#">Ludo</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Snakes and ladders Plus</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Trump Cards Mania</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Zupee Cricket X Tambola</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Zupee Cricket Cards</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-posts-of-zupee footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Popular Posts
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="text6">
+                                    <a href="#">Download ludo online cash </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">games (iOS | Android)</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Best money earning apps in </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">India </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Play online cash games apk </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">How to Win Ludo Money online</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Ludo earning app to win cash </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Play games to win money online </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-partners footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Payment Partners
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="partner-image">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/12/zupee-razorpay-payment-icon.png" alt="Error">
+                                </div>
+                                <div class="partner-image">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/12/zupee-jusfree-payment-icon.png" alt="Error">
+                                </div>
+                                <div class="partner-image">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/12/zupee-cashfree-payment-icon.png" alt="Error">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zupee-info">
+                        <div class="footer-logo">
+                            <a href="home.html">
+                                <img src="https://www.zupee.com/wp-content/uploads/2022/06/logo-footer-1.png" alt="zupee">
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <div class="social">
+                                <a href="https://www.facebook.com/zupeegames" target="_blank">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/facebook-icon1.webp" alt="facebook">
+                                </a>
+                            </div>
+                            <div class="social">
+                                <a href="https://www.instagram.com/zupee_official/" target="_blank">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/instagram-icon.webp" alt="instaramm">
+                                </a>
+                            </div>
+                            <div class="social">
+                                <a href="https://www.youtube.com/c/ZupeeOfficial" target="_blank">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/youtube-icon.webp" alt="youtube-icon">
+                                </a>
+                            </div>
+                            <div class="social">
+                                <a href="mailto:care@zupee.com">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/mail-icon.webp" alt="mail-icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="about-makers">
+                            <div class="makers">
+                                created by rakesh khokhar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="zupee.js"></script>
+</body>
+</html>

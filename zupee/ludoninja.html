@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ludo-supreme-league</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="ludo.css">
+</head>
+<body>
+    <div class="zuppe">
+        <div class="container-zupee">
+            <nav class="navbar">
+                <div class="navbox">
+                    <div class="navbarbox">
+                        <div class="navbar-brand">
+                            <a href="home.html">
+                                <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/logo.png"
+                                    alt="logo">
+                            </a>
+                        </div>
+                        <div class="navbar-list-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor"
+                                    class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                            </a>
+                            <!-- <div class="navbar-list-s">
+                                <div class="navbar-list-item-s">
+                                    <img src="data:image/webp;base64,UklGRjoDAABXRUJQVlA4WAoAAAAQAAAAIQAAIQAAQUxQSHEAAAABb2CQbeTcj2BDeJOLiLgaIvsEbmrbdqJL1JBKOjxkBUjAAgKQgIIMPRPK6CKHJ2f+baeM6P8EANVBfrcBgOIjqqsBPES9RiqsvVD+lWpeVP+hLvKH/VCXF9U/qWj/ZcJSWANPogHSt9LFBpAfFFoHAABWUDggogIAAFANAJ0BKiIAIgA+kUKXSKWkIiEuO/gAsBIJbACdMyX8r655kVGfnusImGsK8+Z0ZLtm3maZJviammdWuAlVjdbqCB4WANIEeS8KqFVBmCGCmUhfei64SoHoT8Qq5SDaKLos4ZwyXN33pWxoY8tAXn5IP2gA/veh7+GH+i6BizgbKEDhbHRxBua4TH8MsmJ+FhhL6rxd9NwK2HT/u+AbnEI+8Dke00/4umNvZ0We/wy8+yZLN0GzzX8yituQtY3/skWt8HKcIrV7tZC9pl+2QSPyNu+/4yonDv5G9EzRH9XmkZo1zOKlunYrG6O7kxEOam9Nht7bQANjtWkZ6LbEjx3FVuPwWxd5uhvY2nhK6i+Ib/C8M9uF91XG1hVVzWo6y2UIFbhWhYUdRQWOmCcIIXh5AfdXTN3+dt088+8vjjzPugIHBRDr15EjVcHWuCg3As7ZrxG795WvzdYVSi6RVzvOOOSTO1tyF4rcQRaO9Qlxc7LxtW5uckCEQXLGMVoAJb8RclvLz+t+9suUyn4MdjZSgUZ4FdIIAlsJu+/ZB2ZSpI+ODEr2v9af8e/v0ez/wCDli115LTSJXbUj3kLJFisjD42D3YlrcCpIdt9Z3besCr0btT9fcL55XuMQC4fR9SVDNn5Qny267jbvln2AYZ3o3OHFOjTNx7Ga77WdDuqNyLE39dBv9LUWiPv0P0R4QnzDJgSIFXNDn+TjBNdOTeHRk/4/a70UGbrEbaK6T5wnGICjdUvd7rdB5RsyceHquaBYS9aCiicG3isXwOIEB1YxNGkzlqEOFaae+HDtOmy/NQQPaQZq9q6zjX5iNVJM3T7sEcdGibkBWI/CZz2jYSV9zI3pl2MlwSv2Zy1dB8t032Z399vPSwGOKaOkaREsAAAA" alt="ludo supreme">
+                                    <a href="#" class="text">LUDO SUPREME</a>
+                                 </div> -->
+                            <!-- <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                                <div class="navbar-list-item-s"></div>
+                            </div> */ -->
+                        </div>
+                        <div class="navbar-list">
+                            <div class="navbar-list-items">
+                                <button class="text dropdown-menu" onclick="myDisplay()">
+                                OUR GAMES<span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="rgb(89, 3, 170)" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                        </svg></span>
+                                </button>
+                                <div class="dropdown" id="display">
+                                    <div class="dropdown-item"><a href="ludosupreme.html" class="text">LUDO SUPREME</a></div>
+                                    <div class="dropdown-item"><a href="ludoninja.html" class="text"">LUDO NINJA</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="ludoTurbo()">LUDO TURBO</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="snakeLadders()">SNAKE AND LADDERS PLUS</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="trumpCard()">TRUMP CARD MANIA</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="ludoLeague()">LUDO SUPREME LEAGUE</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="cricketX()">ZUPEE CRICKET X TAMBOLA</a>
+                                    </div>
+                                    <div class="dropdown-item"><a href="#" class="text" onclick="cricketCard()">ZUPEE CRICKET CARDS</a></div>
+                                </div>
+                            </div>
+                            <div class="navbar-list-items"><a href="#" class="text">ABOUT US</a></div>
+                            <div class="navbar-list-items"><a href="#" class="text">F&Qs</a></div>
+                            <div class="navbar-list-items"><a href="#" class="text">BLOG</a></div>
+                            <div class="navbar-list-items"><a href="#" class="text">CONTACT US</a></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="game-contanier" id="ludoninja">
+                <div class="download-games download-game-name">
+                    <div class="download">
+                        <div class="download-head">
+                            <div>Play Ludo Online with Ludo Ninja</div>
+                        </div>
+                        <div class="download-line">
+                            <div>Download Ludo Ninja, a dice-less game by Zupee,
+                                to win real money. </div>
+                        </div>
+                        <div class="download-app">
+                            <button class="buttonDownload">Download App</button>
+                        </div>
+                        <div class="download-quantity">
+                            <div class="download-number">
+                                <span><img
+                                        src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/Download.webp"
+                                        alt=""></span>
+                                2Cr+ Downloads
+                            </div>
+                            <div class="download-number">
+                                <span><img
+                                        src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/crown.webp"
+                                        alt=""></span>
+                                ₹10 Cr+ Daily cash winnings
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <div class="game-image-inner">
+                        <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/play-ludo-ninja-online-win-real-money1.webp"
+                        alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="winning-block">
+                <div class="inner-box-winning">
+                    <div class="winner-head">
+                        <div class="text1">Ludo Online Games: Advantages</div>
+                    </div>
+                    <div class="services-by-zupee">
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/play-games-win-money-instant-withdrawals.png" alt="instant withdwrawals">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/zupee-games-legal-and-secure.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/cashback-referral-zupee.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/play-zupee-games-online-24-7.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/rng-certified-dice-game.png" alt="">
+                        </div>
+                        <div class="withdrawals">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/best-gaming-experience-customer-support.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-block">
+                    <div class="rating-block">
+                        <div class="rating-head">
+                            <div class="text1">Ludo Online &hyphen; Zupee Ludo Ninja Reviews </div>
+                        </div>
+                        <div class="rating-line">
+                            <div class="text2">Download Zupee Ludo Ninja Apk to win Ludo cash up to₹ 10 Lakh. Take a look at the Ludo Ninja <a href="" class="text2">real money game</a> reviews below: </div>
+                        </div>
+                        <div class="review-image">
+                            <img src="https://static-perf1.zupee.com/wp-content/uploads/2022/06/best-real-money-earning-game-ratings.png" alt="rating">
+                        </div>
+                    </div>
+                    <div class="review-block-inner">
+                        <div class="review-block-inner-user">
+                            <div class="about-review-user">
+                                <div class="user-info">
+                                    <img src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/zupee-winner-ravi.png" alt="user 1">
+                                </div>
+                                <div class="user-name">
+                                    <div>RAVI</div>
+                                </div>
+                            </div>
+                            <div class="user-review">
+                                <div class="text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error architecto adipisci laudantium saepe temporibus, ex officia corrupti minima accusamus voluptas ipsam ratione aliquam, totam voluptatum sunt commodi! Molestias, mollitia vero.</div>
+                            </div>
+                        </div>
+                        <div class="review-block-inner-user">
+                            <div class="about-review-user">
+                                <div class="user-info">
+                                    <img src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/zupee-winner-anirudh-singh.png" alt="user 1">
+                                </div>
+                                <div class="user-name">
+                                    <div>ANITUDH SINGH</div>
+                                </div>
+                            </div>
+                            <div class="user-review">
+                                <div class="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi itaque perspiciatis aliquam sit fuga facilis corporis, ipsa dolore iusto nihil vero, provident nobis magnam voluptates quis ab deleniti consequatur cum sunt optio fugit eligendi ullam reprehenderit. Reprehenderit doloribus laborum quasi, facilis quisquam, dolores ipsum quis perferendis minus illo voluptas dignissimos!</div>
+                            </div>
+                        </div>
+                        <div class="review-block-inner-user">
+                            <div class="about-review-user">
+                                <div class="user-info">
+                                    <img src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/zupee-winner-aparna.png" alt="user 1">
+                                </div>
+                                <div class="user-name">
+                                    <div>APARNA</div>
+                                </div>
+                            </div>
+                            <div class="user-review">
+                                <div class="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nisi earum aspernatur dicta, voluptates illum itaque quis rem quos quas aliquid hic molestias ad et. Minima totam, dolores ullam alias expedita numquam maxime dignissimos eaque nisi esse, eligendi quidem nihil.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-block">
+                <div class="steps-block-header">
+                    <div class="steps-header">
+                        <div class="text1">How to download Ludo Ninja Apk for android?</div>
+                    </div>
+                    
+                    <div class="steps">
+                        <div class="steps-download">
+                            <div class="text2 font">You can download the Ludo Ninja apk, by installing Zupee App. The process is easy and smooth. Here is how to install and play Ludo online on Ludo Ninja:</div>
+                            <ol type="1" class="text2 font"> 
+                                <li>Download the Zupee Ludo real money app on your mobile device by clicking the download button.</li>
+                                <li>A general warning will be shown. Click OK. </li>
+                                <li>Locate the app by checking the phone notifications OR go to “My files &hyphen;> Downloads folder”.</li>
+                                <li>Install & register on the app.</li>
+                                <li>Select the Ludo Ninja game. </li>
+                                <li>Select a game format &hyphen; 1 vs. 1, 1 winner, 2 winners, 3 winners.</li>
+                                <li>Play Ludo Ninja with or without an entry fee. </li>
+                                <li>Earn maximum points to win the game. </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="download-steps-video">
+                        <video controls>
+                            <source src="https://static-perf1.zupee.com/wp-content/uploads/2023/01/HowtoInstall_Zupee-Ready-English.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="ludo-box">
+                <div class="ludo-box-inner">
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">About Ludo Ninja</div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">
+                                Ludo Ninja is a limited-move, dice-less online Ludo game where players can see the upcoming values on the dice.  As a result, players can strategize their moves right from the start. A dice-less format, with 24/7 live tournaments, and a chance to win real money, makes Ludo Ninja one of a kind online Ludo game. So, download Ninja Apk and experience Ludo like never before!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">Ludo Ninja Gameplay on Zupee</div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">Ludo Ninja is a dice-less online Ludo game by Zupee. Like the classic Ludo game, Ludo Ninja is a multiplayer strategy board game for 2-4 players, in which the players race their four tokens from start to finish according to the number on the dice.</div>
+                            <div class="ludo-box-text">
+                                However, players can see the upcoming dice value, and to maintain quick gameplay, each player has limited moves. They need to earn maximum points within those moves to win the game.  To play Ludo Ninja:
+                            </div>
+                            <ul class="ludo-list">
+                                <li>Select the multiple game formats &hyphen; 1 vs. 1, 1 winner, 2 winners, and 3 winners</li>
+                                <li>Choose from paid games and free games. You can win as much as 10 lakhs when you play paid games.</li>
+                                <li>Based on the upcoming dice value, select and move the token.</li>
+                                <li>You don't need a 6 to start playing. All the tokens are in the open position, making it a fast game.</li>
+                                <li>Land on the opponent's token to capture their token and send it back home. As a result, they lose out on points earned by that token. </li>
+                                <li>For every box moved, you earn 1 point, and when your tokens reach the central box called 'Home', you earn 56 points. </li>
+                                <li>Earn maximum points within the limited no. of moves &hyphen; 24 moves for each player.</li>
+                                <li>The player who earns the maximum points wins the Ludo Ninja game. </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">Ludo Online - Ludo Ninja Rules </div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">Ludo Supreme gold rules are slightly different from the classic Ludo game rules:</div>
+                            <ul class="ludo-list">
+                                <li>You are assigned random colored tokens at the beginning of the game.</li>
+                                <li>All the tokens are in the open position. You don't need a 6 to begin the game. There are no dice in Ludo Ninja. Instead, you can see the number of boxes you can move pop next to your profile icon. You can also see what numbers you will get in the next few moves so you can plan your strategy accordingly.</li>
+                                <li>All Ninja players get an equal number of moves and have 10 seconds to make each move.</li>
+                                <li>Every player gets an equal number of 1s, 2s, 3s, 4s, 5s, and 6s, just in a different order.</li>
+                                <li>You lose a turn every time you fail to make a move within the stipulated 10 seconds. So, if you skip three times, you will be out of the game.</li>
+                                <li>You do not get an extra turn when you roll a 6 on Ludo ninja. </li>
+                                <li>You get an extra turn when you cut an opponent's token or one of your tokens reaches home.</li>
+                                <li>A player earns 1 point for every box moved. If the token is cut, all points made on that token are lost.</li>
+                                <li>You score an extra 56 points for each token that reaches home. </li>
+                                <li>The player with the highest score wins the game. In case of a tie, the payout is split.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="ludo-box-inner-box">
+                        <div class="ludo-box-inner-head text1">Ludo Ninja - Tips & Tricks</div>
+                        <div class="ludo-box-discription">
+                            <div class="ludo-box-text">Here are some tips and tricks that will make you win the Ludo Ninja game:  </div>
+                            <ul class="ludo-list">
+                                <li>Ludo Ninja is a limited moves game, so make sure you plan each of your moves carefully. It may break or make the game for you!</li>
+                                <li>Use the ‘View all’ button to get a snippet of what dice values you will be getting next. Plan your moves strategically using this information. </li>
+                                <li>Don’t go easy on the opponent. Remember, everyone wants to be a winner.</li>
+                                <li>Remember, you don’t get an extra turn when you get a 6 so, include this in your strategy.</li>
+                                <li>Always safeguard the token that has advanced the most in the game. </li>
+                                <li>Use the 10-second timer to your advantage.</li>
+                                <li>Use the safe boxes in your strategy.</li>
+                                <li>Always stay at least 7 boxes ahead of your opponent.</li>
+                                <li>Check the profile of the opponent to look at their wins and losses so far. You may get an idea of how good a player your opponent is so you can strategize accordingly.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ludo-question">
+                <div class="question-inner">
+                    <div class="question-head">
+                        <div class="text1">Ludo Ninja FAQs</div>
+                    </div>
+                    <div class="questions-block">
+                        <div class="question">
+                            <button onclick="myQuestion1()"><div class="text4">How can I withdraw my money from Ludo Ninja?</div>
+                            <div id="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                              </svg></div>
+                            </button>
+                            <div class="answer" id="answer1">
+                                <div class="text5">
+                                    You can easily withdraw your cash winnings online from the Ludo Ninja game.  Log in to your Zupee account and click on the “Withdraw” option. Fill in the bank details or UPI ID, and the amount you want to withdraw. The money will be transferred to your account once you click withdraw. 
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion2()">
+                                <div class="text4">Can I win real Ludo money online on Ludo Ninja?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer2">
+                                <div>Yes. On Ludo Ninja, you stand a chance to win real money by playing less than 10mins games. Play the game for free or with real money. Learn how to download and play Ludo Ninja Apk for Android.</div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion3()">
+                                <div class="text4">
+                                    Is it safe to play Ludo on Ludo Ninja? 
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer3">
+                                <div>
+                                    Yes, it is safe to play Ludo on Ludo Ninja. Ludo Ninja by Zupee uses secure payment systems to protect your information and provide good customer service.
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion4()">
+                                <div class="text4">How many players can play the Ludo Ninja online game? </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer4">
+                                <div>
+                                    In total, 2-4 players can play the Ludo board game on Ludo Ninja. Each player gets 24 moves.
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion5()">
+                                <div class="text4">How to win the Ludo Ninja game? </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer5">
+                                <div>
+                                    Follow the game rules and score a maximum number of points to win Ludo Ninja. The player or players (in case of 2 or 3 winners) with the most points wins the prize pot. Learn about 15 Ludo online game tricks to always win the game.
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion6()">
+                                <div class="text4">Can I play Ludo Ninja for free?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer6">
+                                <div>
+                                    Yes. You can choose to play without paying any entry fee on Ludo Ninja
+                                </div>
+                            </div>
+                        </div><hr>
+                        <div class="question">
+                            <button onclick="myQuestion7()">
+                                <div class="text4">Is it safe to add money to Ludo Ninja online game?</div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                      </svg>
+                                </div>
+                            </button>
+                            <div class="answer" id="answer7">
+                                <div>
+                                    Yes. It is safe to add money to the Zupee wallet and play Ludo Ninja.  Zupee has partnerships with the industry’s best payment partners, ensuring smooth and safe transactions. You can add money using a Bank account, UPI, Wallet, or Debit/Credit card.  
+                                </div>
+                            </div>
+                        </div><hr>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer">
+                    <div class="company-info">
+                        <div class="about-zupee-services footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Zupee
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="text6">
+                                    <a href="#">About Us</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">RNG Certification</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">AIGF Skill Certificate</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Privacy Policy</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Terms & Conditions</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Responsible Gaming</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Fair Play</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Blog</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Careers</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="games-of-zupee footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Our Games
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="text6">
+                                    <a href="#">Ludo</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Snakes and ladders Plus</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Trump Cards Mania</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Zupee Cricket X Tambola</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Zupee Cricket Cards</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-posts-of-zupee footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Popular Posts
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="text6">
+                                    <a href="#">Download ludo online cash </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">games (iOS | Android)</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Best money earning apps in </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">India </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Play online cash games apk </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">How to Win Ludo Money online</a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Ludo earning app to win cash </a>
+                                </div>
+                                <div class="text6">
+                                    <a href="#">Play games to win money online </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-partners footer-company-box">
+                            <div class="footer-head">
+                                <div class="text7">
+                                    Payment Partners
+                                </div>
+                            </div>
+                            <div class="footer-box">
+                                <div class="partner-image">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/12/zupee-razorpay-payment-icon.png" alt="Error">
+                                </div>
+                                <div class="partner-image">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/12/zupee-jusfree-payment-icon.png" alt="Error">
+                                </div>
+                                <div class="partner-image">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/12/zupee-cashfree-payment-icon.png" alt="Error">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zupee-info">
+                        <div class="footer-logo">
+                            <a href="home.html">
+                                <img src="https://www.zupee.com/wp-content/uploads/2022/06/logo-footer-1.png" alt="zupee">
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <div class="social">
+                                <a href="https://www.facebook.com/zupeegames" target="_blank">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/facebook-icon1.webp" alt="facebook">
+                                </a>
+                            </div>
+                            <div class="social">
+                                <a href="https://www.instagram.com/zupee_official/" target="_blank">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/instagram-icon.webp" alt="instaramm">
+                                </a>
+                            </div>
+                            <div class="social">
+                                <a href="https://www.youtube.com/c/ZupeeOfficial" target="_blank">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/youtube-icon.webp" alt="youtube-icon">
+                                </a>
+                            </div>
+                            <div class="social">
+                                <a href="mailto:care@zupee.com">
+                                    <img src="https://www.zupee.com/wp-content/uploads/2022/06/mail-icon.webp" alt="mail-icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="about-makers">
+                            <div class="makers">
+                                created by rakesh khokhar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="zupee.js"></script>
+    <!-- <script>
+        const myDisplay=()=>{
+            const drop = document.getElementById("display");
+            if (drop.style.display == "block") {
+                drop.style.display = "none";
+            }
+            else {
+                drop.style.display = "block";
+            }
+        }
+    </script> -->
+</body>
+</html>
