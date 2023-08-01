@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>countdown</title>
+</head>
+<body>
+    <script>
+        function countdown(a){
+            if(a<=0){
+                document.write('0');
+            }
+            else{
+                document.write(a+'<br>');
+                countdown(a-1);
+            }
+        }
+        var a=parseInt(prompt('enter a number'));
+        countdown(a);
+    </script>
+</body>
+</html>

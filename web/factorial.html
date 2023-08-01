@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>factorial of a number</title>
+</head>
+<body>
+<script>
+var a=prompt("enter a nuumber");
+var f=factorial(a);
+document.write('factorial is = '+f);
+function factorial(a){
+    if(a<=0)
+    {
+        return 1;
+    }
+    else
+    {
+        return  a*factorial(a-1);
+        
+    }
+}
+
+</script>
+</body>
+</html>

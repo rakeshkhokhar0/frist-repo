@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>calucater</title>
+    <style>
+        .container{
+            background-color: black;
+            width: 20vw;
+            padding: 2vw;
+        }
+        .result{
+            width: 80%;
+        }
+        .all{
+            margin: 1vw;
+        }
+        input[type=button]{
+            width: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" name="form">
+            <div class="result">
+                <input type="text" id="ans">
+            </div>
+            <div class="all">
+                <input type="button" value="1" onclick="form.ans.value+='1'">
+                <input type="button" value="2" onclick="form.ans.value+='2'">
+                <input type="button" value="3" onclick="form.ans.value+='3'">
+                <input type="button" value="+" onclick="form.ans.value+='+'">
+            </div>
+            <div class="all">
+                <input type="button" value="4" onclick="form.ans.value+='4'">
+                <input type="button" value="5" onclick="form.ans.value+='5'">
+                <input type="button" value="6" onclick="form.ans.value+='6'">
+                <input type="button" value="-" onclick="form.ans.value+='-'">
+            </div>
+            <div class="all">
+                <input type="button" value="7" onclick="form.ans.value+='7'">
+                <input type="button" value="8" onclick="form.ans.value+='8'">
+                <input type="button" value="9" onclick="form.ans.value+='9'">
+                <input type="button" value="*" onclick="form.ans.value+='*'">
+            </div>
+            <div class="all">
+                <input type="button" value="0" onclick="form.ans.value+='0'">
+                <input type="button" value="00" onclick="form.ans.value+='00'">
+                <input type="button" value="=" onclick="form.ans.value=eval(form.ans.value)">
+                <input type="button" value="/" onclick="form.ans.value+='/'">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

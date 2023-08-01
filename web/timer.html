@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown using Recursion</title>
+    <script>
+      function countdown(seconds) {
+        if (seconds >= 0) {
+          document.getElementById("timer").innerHTML = seconds;
+          setTimeout(function () {
+            countdown(seconds - 1);
+          },10000);
+        } else {
+          document.getElementById("timer").innerHTML = "Countdown complete!";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Countdown:</h1>
+    <div id="timer"></div>
+    <script>
+      countdown(10); // Start the countdown from 10 seconds
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function valid()
+        {
+        var nam=document.getElementById("name").value;
+        var pass=document.getElementById('password').value;
+        var con=document.getElementById('contact').value;
+        var eam=document.getElementById('email').value;
+        if((nam.length<=5)||(nam.length>15)||(nam==''))
+        {
+            document.getElementById('errorn').innerHTML="name must be contain minium 5 charcter and maixium 15 charcter";
+            return false;
+        }
+        if((pass=''))
+        {
+            document.getElementById('errorp').innerHTML="password must contain minium 8 charcter";
+            return false;
+        }
+        if(con='')
+        {
+            document.getElementById('errorc').innerHTML="this field con't be blank"
+            return false;
+        }
+        if(isNaN(con))
+        {
+            document.getElementById('errorc').innerHTML="contact number must be contain only digits";
+            return false;
+        }
+        }
+    </script>
+</head>
+<body>
+    <form action="" onsubmit="return valid()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="full name">
+        <span id="errorn"></span><br><br>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="password" id="password">
+        <span id="errorp"></span><br><br>
+        <label for="contact">Contact no.</label>
+        <input type="text" id="contact" placeholder="contact no.">
+        <span id="errorc"></span><br><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="email">
+        <span id="errore"></span><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
