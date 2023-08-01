@@ -1,0 +1,14 @@
+*{
+    background-color: aqua;
+}
+.head{
+    color: #fff;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 5%;
+}
+.bottom{
+    text-align: center;
+    font: optional;
+}

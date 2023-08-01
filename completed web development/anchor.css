@@ -1,0 +1,14 @@
+.img{
+    width: 100%;
+    
+}
+.google:link{
+    color: rgb(165, 240, 26);
+    background-color: rgb(176, 176, 201);
+    text-decoration: none;
+    width: 200%;
+}
+.google:hover{
+    color: blueviolet;
+    background-color: rgb(123, 196, 214);
+}

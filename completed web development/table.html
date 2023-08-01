@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table,td,tr,th{
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        td,th{
+            padding: 3px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <caption>details</caption>
+            <thead>
+                <tr>
+                    <th>frist name</th>
+                    <th>last name</th>
+                    <th>gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>rakesh</td>
+                    <td>khokhar</td>
+                    <td>male</td>
+                </tr>
+                <tr>
+                    <td>saroj</td>
+                    <td rowspan="2">jat</td>
+                    <td rowspan="2">female</td>
+                </tr>
+                <tr>
+                    <td>nikita</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td rowspan="3">1</td>
+                <td rowspan="3">2</td>
+                <td rowspan="3">3</td>
+                <td rowspan="3">4</td>
+                <td rowspan="3">5</td>
+            </tr>
+            <tr>
+                
+            </tr>
+            <tr>
+              
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
