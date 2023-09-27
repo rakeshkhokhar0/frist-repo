@@ -1,0 +1,91 @@
+/*stylesheet*/
+@media all and (min-width: 792px){
+    div.nav nav div{
+        padding: 1vw;
+        font-size: 2vw;
+    }
+    div.block{
+        width: 90%;
+    }
+    div.food_type_box{
+        width: 23%;
+        padding: 2vw 0;
+    }
+    div.food{
+        width: 100%;
+        margin: 3% 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    div.parts a{
+        padding: 1vw 1vw;
+        font-size: 2vw;
+    }
+    div.my_passion div{
+        opacity: 0.6;
+        font-size: 1.5vw;
+    }
+    div.text{
+        font-size: 1.5vw;
+        margin: 1vw;
+    }
+    div.footer_box div.box{
+        width: 30%;
+    }
+    div.footer_box{
+        display: flex;
+        justify-content: space-around;
+    }
+    div.footer_box div p{
+        font-size: 1.5vw;
+    }
+}
+@media all and (max-width: 792px){
+    div.block{
+        width: 100%;
+    }
+    div.nav nav div{
+        padding: 2vw;
+        font-size: 4vw;
+    }
+    div.food_type_box{
+        width: 100%;
+        margin: 3% 0;
+    }
+    div.nevigetion{
+        margin: 10vw 0;
+    }
+    div.food{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    div.parts a{
+        padding: 2vw;
+        font-size: 4vw;
+    }
+    div.my_passion div{
+        font-size: 4vw;
+        opacity: 0.6;
+    }
+    div.text{
+        margin: 2vw;
+        font-size: 3vw;
+    }
+    div.footer_box{
+        display: block;
+        margin: auto;
+        width: 75%;
+    }
+    div.box{
+        text-align: center;
+        width: 100%;
+    }
+    div.footer_box div p{
+        font-size: 3vw;
+    }
+    div.footer_box{
+        margin-bottom: 10vw;
+    }
+}

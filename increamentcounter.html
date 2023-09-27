@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blueviolet;
+            color: black;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+        div.container{
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            font-size: 2vw;
+        }
+        div.content{
+            text-transform: capitalize;
+        }
+        div.social{
+            text-align: center;
+            color: white;
+        }
+        div.data{
+            margin: 1vw 0;
+            font-size: 3.5vw;
+        }
+        @media only scree and (max-width: 600px){
+            div.container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="social">
+            <i class="fab fa-twitter fa-3x"></i>
+            <div class="data" data-target="15000">15000</div>
+            <div class="content">twitter fans</div>
+        </div>
+        
+        <div class="social" >
+            <i class="fab fa-youtube fa-3x"></i>
+            <div class="data" data-target="5000">5000</div>
+            <div class="content">youtube fans</div>
+        </div>
+        <div class="social">
+            <i class="fab fa-facebook fa-3x"></i>
+            <div class="data" data-target="10000">10000</div>
+            <div class="content">facebook fans</div>
+        </div>
+    </div>
+    <script>
+        const number = document.querySelectorAll('.data');
+        number.forEach(num=>{
+            num.innerText='0';
+
+            const updateCounter=()=>{
+                const target = +num.getAttribute('data-target');
+                const c = +num.innerText;
+                 
+                const inc = target/200;
+                if(c<target){
+                    num.innerText=`${Math.ceil(c + inc)}`
+                    setTimeout(updateCounter, 1);
+                }
+                else{
+                    num.innerText=target;
+                }
+            }
+            updateCounter();
+        })
+    </script>
+</body>
+</html>

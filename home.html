@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodblog</title>
+    <link rel="stylesheet" href="food.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div.block{
+            display: block;
+            margin: auto;
+        }
+        div.nav{
+            background-color: #fefafa;
+            position: sticky;
+            top: 0;
+        }
+        div.nav nav{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        div.nav nav div:hover{
+            background-color: rgb(179, 172, 172);
+        }
+        div.food_types{
+            padding: 3% 0;
+        }
+        div.food_image{
+            width: 100%;
+        }
+        div.food_image img{
+            width: 100%;
+        }
+        div.food_discription h2{
+            text-align: center;
+            padding: 0 1vw;
+        }
+        div.food_discription div{
+            text-align: center;
+        }
+        div.parts{
+            text-align: center;
+        }
+        div.parts a{
+            text-decoration: none;
+            color: black;
+            margin: 0;
+        }
+        div.parts a:hover{
+            background-color: black;
+            color: white;
+        }
+        hr{
+            height: 2px;
+            color: black;
+        }
+        div.about_food_man{
+            padding: 2vw 0 3vw 0;
+        }
+        div.about_me{
+            text-align: center;
+            margin: 2vw;
+        }
+        div.food_man{
+            display: block;
+            margin: auto;
+            width: 80%;
+        }
+        div.food_man img{
+            width: 100%;
+        }
+        div.my_passion{
+            text-align: center;
+        }
+        div.text p{
+            text-align: center;
+        }
+        div.footer{
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+        div.footer_box{
+            width: 100%;
+            margin-top: 3%;
+        }
+        div.footer_box{
+            margin: 3vw 0;
+        }
+        div.footer_box div.about_footer div{
+            opacity: 0.6;
+        }
+        div.posts,div.name{
+            width: 100%;
+        }
+        div.post_image{
+            width: 20%;
+            height: auto;
+        }
+        div.name{
+            display: flex;
+            margin: 0;
+        }
+        div.post_image img{
+            width: 100%;
+            height: auto;
+        }
+        div.name:hover{
+            background-color: #bfb8b8;
+        }
+        div.heading{
+            font-size: 2vw;
+            font-weight: 500;
+        }
+        div.about_post{
+            padding:2vw;
+        }
+        div.popular_tag{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div.popular_tag div{
+            padding: 0.5vw;
+            background-color: #575555;
+            color: white;
+            margin: 1%;
+        }
+        /*stylesheet*/
+@media all and (min-width: 792px){
+    div.nav nav div{
+        padding: 1vw;
+        font-size: 2vw;
+    }
+    div.block{
+        width: 90%;
+    }
+    div.food_type_box{
+        width: 23%;
+        padding: 2vw 0;
+    }
+    div.food{
+        width: 100%;
+        margin: 3% 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    div.parts a{
+        padding: 1vw 1vw;
+        font-size: 2vw;
+    }
+    div.my_passion div{
+        opacity: 0.6;
+        font-size: 1.5vw;
+    }
+    div.text{
+        font-size: 1.5vw;
+        margin: 1vw;
+    }
+    div.footer_box div.box{
+        width: 30%;
+    }
+    div.footer_box{
+        display: flex;
+        justify-content: space-around;
+    }
+    div.footer_box div p{
+        font-size: 1.5vw;
+    }
+}
+@media all and (max-width: 792px){
+    div.block{
+        width: 100%;
+    }
+    div.nav nav div{
+        padding: 2vw;
+        font-size: 4vw;
+    }
+    div.food_type_box{
+        width: 100%;
+        margin: 3% 0;
+    }
+    div.nevigetion{
+        margin: 10vw 0;
+    }
+    div.food{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    div.parts a{
+        padding: 2vw;
+        font-size: 4vw;
+    }
+    div.my_passion div{
+        font-size: 4vw;
+        opacity: 0.6;
+    }
+    div.text{
+        margin: 2vw;
+        font-size: 3vw;
+    }
+    div.footer_box{
+        display: block;
+        margin: auto;
+        width: 75%;
+    }
+    div.box{
+        text-align: center;
+        width: 100%;
+    }
+    div.footer_box div p{
+        font-size: 3vw;
+    }
+    div.footer_box{
+        margin-bottom: 10vw;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="block">
+            <div class="nav" id="top_web">
+                <nav>
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </div>
+                    <div class="">
+                        <span>MY FOOD</span>
+                    </div>
+                    <div class="">
+                        Mail
+                    </div>
+                </nav>
+            </div>
+            <div class="food_types">
+                <div class="food">
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>The Perfect Sandwich, A Real NYC Classic</h2>
+                            <div>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</div>
+                        </div>
+                    </div>
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/steak.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>Let Me Tell You About This Steak</h2>
+                            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed fugit pariatur quibusdam fuga, asperiores error?</div>
+                        </div>
+                    </div>
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/cherries.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>Cherries, interrupted</h2>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, perspiciatis.</div>
+                        </div>
+                    </div>
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/wine.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>Once Again, Robust Wine and Vegetable Pasta</h2>
+                            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quos alias aut totam non quibusdam.</div>
+                        </div>
+                    </div>
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>All I Need Is a Popsicle</h2>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, debitis?</div>
+                        </div>
+                    </div>
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/salmon.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>Salmon For Your Skin</h2>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deserunt minus odit, quaerat rem ipsa?</div>
+                        </div>
+                    </div>
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>The Perfect Sandwich, A Real Classic</h2>
+                            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi eveniet vero provident, dicta officiis officia?</div>
+                        </div>
+                    </div>
+                    <div class="food_type_box">
+                        <div class="food_image">
+                            <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="error to load image">
+                        </div>
+                        <div class="food_discription">
+                            <h2>Le French</h2>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, excepturi.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nevigetion">
+                    <div class="parts">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </a>
+                        <a href="" style="background-color: black; color: #fefafa;">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div><hr>
+            <div class="about_food_man">
+                <div class="about_me">
+                    <h3>About Me, The Food Man</h3>
+                </div>
+                <div class="food_man">
+                    <img src="https://www.w3schools.com/w3images/chef.jpg" alt="error to load image">
+                </div>
+                <div class="my_passion">
+                    <h3>I am Who I Am!</h3>
+                    <div>With Passion For Real, Good Food</div>
+                </div>
+                <div class="text">
+                    <p>
+                        Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="footer">
+                <div class="footer_box">
+                    <div class="about_footer box">
+                        <h1>FOOTER</h1>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                        <div>created by Rakesh Khokhar</div>
+                    </div>
+                    <div class="posts box">
+                        <div>
+                            <h2>BLOG POSTS</h2>
+                        </div>
+                        <div class="name">
+                            <div class="post_image">
+                                <img src="https://www.w3schools.com/w3images/workshop.jpg" alt="error to load image">
+                            </div>
+                            <div class="about_post">
+                                <div class="heading">LOREM</div>
+                                <div>Sed mattis nunc</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="name">
+                            <div class="post_image">
+                                <img src="https://www.w3schools.com/w3images/gondol.jpg" alt="error to load image">
+                            </div>
+                            <div class="about_post">
+                                <div class="heading">IPSPUM</div>
+                                <div>Praes tinci sed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tgs box">
+                        <h2>POPULAR TAG</h2>
+                        <div class="popular_tag">
+                            <div>Travel</div>
+                            <div>Newyork</div>
+                            <div>Dinner</div>
+                            <div>Salmon</div>
+                            <div>France</div>
+                            <div>Drinks</div>
+                            <div>Ideas</div>
+                            <div>Flavors</div>
+                            <div>Cuisine</div>
+                            <div>chicken</div>
+                            <div>Dressing</div>
+                            <div>Fried</div>
+                            <div>Fish</div>
+                            <div>Duck</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

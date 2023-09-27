@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random choices Picker</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        div.block{
+            text-align: center;
+            width: 30%;
+        }
+        h3{
+            color: #fff;
+            font-size: 1.5vw;
+        }
+        textarea{
+            width: 100%;
+            height: 15vh;
+            font-size: 1.5vw;
+        }
+        textarea:focus{
+            outline: none;
+        }
+        .tags{
+            text-align: center;
+        }
+        .tag{
+            background-color: rgb(239, 178, 11);
+            border-radius: 50px;
+            font-size: 1.5vw;
+            padding: 0.5vw 1vw;
+            margin: 0.5vw;
+            display: inline-block;
+        }
+        .tag.highlight{
+            background-color:  #273c75;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h3>enter all the choices devided by coma(',')
+            <br>then press the enter
+        </h3>
+        <textarea id="textarea" placeholder="enter choices here..."></textarea>
+        <div class="tags"></div>
+    </div>
+    <script>
+        const tags = document.querySelector('.tags');
+        const textarea = document.getElementById('textarea');
+
+        textarea.focus();
+        textarea.addEventListener('keyup', (e) => {
+        createTags(e.target.value);
+        if(e.key == 'Enter'){
+            e.target.value='';
+            randomSelect();
+        }
+    })
+    function createTags(input){
+        const arr = input.split(',').filter(text=>text.trim()!=='').map(text=>text.trim());
+        tags.innerHTML='';
+        arr.forEach(element => {
+            const ele1 = document.createElement('span');
+            ele1.classList.add('tag');
+            ele1.innerText = element;
+            tags.appendChild(ele1);        
+        });
+    }
+    function randomSelect() {
+        const times = 30
+
+        const interval = setInterval(() => {
+            const randomTag = pickRandomTag()
+        
+        if (randomTag !== undefined) {
+            highlightTag(randomTag)
+
+            setTimeout(() => {
+                unHighlightTag(randomTag)
+            }, 100)
+        }
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(interval)
+
+            setTimeout(() => {
+                const randomTag = pickRandomTag()
+
+                highlightTag(randomTag)
+            }, 100)
+
+        }, times * 100)
+    }
+    function pickRandomTag(){
+        const random = document.querySelectorAll('.tag');
+        return random[Math.floor(Math.random()*random.length)]
+    }
+    function highlightTag(tag){
+        return tag.classList.add('highlight')
+    }
+    function unHighlightTag(tag){
+        return tag.classList.remove('highlight')
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bluryloading</title>
+    <style>
+        body{
+            margin: 0;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+        div.img{
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png');
+            background-repeat: repeat;
+            z-index: -1;
+            position: relative;
+            opacity: 1;
+        }
+        .loading-text{
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img"></div>
+    <div class="loading-text">0%</div>
+    <script>
+        const text = document.querySelector('.loading-text');
+        const img = document.querySelector('.img');
+        let load = 0;
+        let int = setInterval(loading,50);
+        // const loading=()=>{
+        function loading(){
+            load++
+            if(load>99){
+                clearInterval(int);
+            }
+            text.innerHTML = `${load}%`
+            text.style.opacity = scale(load, 0, 100, 1, 0);
+            img.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
+        }
+        const scale = (num, in_min, in_max, out_min, out_max) => {
+             return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+        }
+    </script>
+</body>
+</html>

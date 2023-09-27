@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jocks</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        div.container{
+            background-color: #fff;
+            color: black;
+            padding: 2vw;
+            border-radius: 5px;
+            box-shadow: 0.5vw 0.5vw 0.5vw black;
+            max-width: 100%;
+            width: 50%;
+            text-align: center;
+        }
+        h1{
+            font-size: 3vw;
+            text-transform: capitalize;
+        }
+        div.jock{
+            margin: 2vw 0;
+            font-size: 2vw;
+        }
+        .btn{
+            background-color: blue;
+            font-size: 2vw;
+            padding: 1vw 3vw;
+            cursor: pointer;
+            border-radius: 5px;
+            color: #fff;
+            border: 0;
+        }
+        .btn:hover  {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>don't laugh challenge</h1>
+        <div class="jock" id="joke">
+            here is jock
+        </div>
+        <button id="jokeBtn" class="btn">Get Anouther jock</button>
+    </div>
+    <script>
+        const jokeEl = document.getElementById('joke')
+        const jokeBtn = document.getElementById('jokeBtn')
+
+        jokeBtn.addEventListener('click', generateJoke)
+
+        generateJoke()
+
+// USING ASYNC/AWAIT
+            async function generateJoke() {
+            const config = {
+                headers: {
+                Accept: 'application/json',
+                },
+            }
+
+            const res = await fetch('https://icanhazdadjoke.com', config)
+
+            const data = await res.json()
+
+            jokeEl.innerHTML = data.joke
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expantion card</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+        div.expantion{
+            display: flex;
+            width: 90vw;
+        }
+        div.cards1{
+            background-image: url('https://images.unsplash.com/photo-1628320281190-89b24da58b0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNlYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+        }
+        div.cards2{
+            background-image: url('https://plus.unsplash.com/premium_photo-1670508511045-1b9d41253f25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2VhcmNofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+        }
+        div.cards3{
+            background-image: url('https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2VhcmNofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+        }
+        div.cards4{
+            background-image: url('https://plus.unsplash.com/premium_photo-1673138808212-f44935ec2c96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2VhcmNofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+        }
+        div.cards5{
+            background-image: url('https://images.unsplash.com/photo-1602345397613-0934a8812d23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNlYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+        }
+        div.card{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh;
+            border-radius: 50px;
+            color: #fff;
+            cursor: pointer;
+            flex: 0.5;
+            margin: 10px;
+            position: relative;
+            transition: 1s;
+        }
+        .card.active{
+            flex: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="expantion">
+        <div class="cards1 card active">
+        </div>
+        <div class="cards2 card">
+        </div>
+        <div class="cards3 card">
+        </div>
+        <div class="cards4 card">
+        </div>
+        <div class="cards5 card">
+        </div>
+    </div>
+    <script>
+        const panels = document.querySelectorAll('.card');
+       
+panels.forEach(card => {
+    console.log(card);
+    card.addEventListener('click', () => {
+        removeActiveClasses()
+        card.classList.add('active')
+    })
+})
+
+function removeActiveClasses() {
+    panels.forEach(card => {
+        card.classList.remove('active')
+    })
+}
+    </script>
+</body>
+</html>

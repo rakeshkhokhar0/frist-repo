@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theme clock</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        :root{
+            --primary-color: #fff;
+            --secondary-color: black;
+        }
+        html{
+            transition: 0.5s all;
+        }
+        html.dark{
+            --primary-color: black;
+            --secondary-color: #fff;
+        }
+        body{
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+        div.container{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .toggle{
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.5vw 1.5vw;
+            font-size: 1.5vw;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        div.clock{
+            position: relative;
+            height: 18vw;
+            margin: 1vw 0;
+            width: 20vw;
+        }
+        div.niddle{
+            position: absolute;
+            background-color:var(--secondary-color);
+            width: 0.2vw;
+            top: 50%;
+            left: 50%;
+            height: 5vw;
+            transform-origin: bottom center;
+        }
+        div.hour{
+            transform: translate(-50%,-100%) rotate(0deg);
+        }
+        div.minute{
+            transform: translate(-50%,-100%) rotate(0deg);
+            height: 8vw;
+        }
+        div.second{
+            transform: translate(-50%,-100%) rotate(0deg);
+            height: 8vw;
+            background-color: #e74c3c;
+        }
+        div.center-point{
+            position: absolute;
+            width: 0.5vw;
+            height: 0.5vw;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            background-color: #e74c3c;
+        }
+        div.center-point::before{
+            content: '';
+            position: absolute;
+            width: 0.2vw;
+            height: 0.2vw;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .time{
+            font-size: 4vw;
+            margin: 1vw 0;
+        }
+        .date{
+            margin: 2vw 0;
+            font-size: 3vw;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="toggle">dark mode</button>
+        <div class="clock">
+            <div class="niddle hour" id="hour"></div>
+            <div class="niddle minute"></div>
+            <div class="niddle second"></div>
+            <div class="center-point"></div>
+        </div>
+        <div class="time" id="time">d</div>
+        <div class="date">d</div>
+    </div>
+    <script>
+        const hour1 = document.getElementById('hour')
+        const minute1 = document.querySelector('.minute');
+        const second1 = document.querySelector('.second');
+        const date1 = document.querySelector('.date');
+        const time1 = document.getElementById('time');
+        const dark = document.querySelector('.toggle');
+
+        const week = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+        const month1 = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+         
+        dark.addEventListener('click',(e)=>{
+            const html = document.querySelector('html');
+            if(html.classList.contains('dark')){
+                html.classList.remove('dark');
+                e.target.innerHTML='Light mode'
+            }
+            else{
+                html.classList.add('dark');
+                e.target.innerHTML='Dark mode';
+            }
+        });
+        const setTime=()=>{
+            const time = new Date();
+            const date = time.getDate();
+            const month = time.getMonth();
+            const day = time.getDay();
+            const hour = time.getHours();
+            const hourforuse = hour>=13?hour%12:hour;
+            const minute = time.getMinutes();
+            const year = time.getFullYear();
+            const second = time.getSeconds();
+            const ampm = hour>=12?'PM':'AM';
+            
+            hour1.style.transform = `translate(-50%,-100%) rotate(${scale(hourforuse,0,12,0,360)}deg)`
+            minute1.style.transform = `translate(-50%,-100%) rotate(${scale(minute,0,60,0,360)}deg)`;
+            // second1.style.transform = `translate(-50%,-100%) rotate(${scale(second,0,60,0,360)}deg)`
+            second1.style.transform = `translate(-50%, -100%) rotate(${(360/60)*second}deg)`;
+
+            time1.innerHTML = `${hourforuse}:${minute < 10 ? `0${minute}` : minute} ${ampm}`
+            date1.innerHTML = `${week[day]} ${date<10?`0${date}`:date} ${month1[month]} ${year}`
+        }
+        
+        const scale=(num,inmin,inmax,outmin,outmax)=>{
+            return (num - inmin) * (outmax - outmin) / (inmax - inmin) + outmin;
+        }
+        setInterval(setTime,1000)
+    </script>
+</body>
+</html>

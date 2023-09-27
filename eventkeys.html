@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-image: linear-gradient(lightblue,gray);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        div.box{
+            background-color: #fff;
+            font-size: 2vw;
+            padding: 1vw 2vw;
+            display: block;
+        }
+        div.block{
+            display: none;
+            margin: 0 1vw;
+            text-align: center;
+        }
+        div.block h3{
+            margin: 1vw 0;
+            padding: 0;
+        }
+        div.content{
+            width: 10vw;
+            margin: 0;
+            background-color: #fff;
+            border: 1px solid black;
+            padding: 1vw 2vw;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>please enter a key</h1>
+    </div>
+    <div class="block">
+        <h3>event key</h3>
+        <div class="content" id="event">
+            tab
+        </div>
+    </div>
+    <div class="block">
+        <h3>event.keycode</h3>
+        <div class="content" id="keycode">
+            9
+        </div>
+    </div>
+    <div class="block">
+        <h3>event.code</h3>
+        <div class="content" id="code">
+            tab
+        </div>
+    </div>
+    <script>
+        window.addEventListener('keydown',(event)=>{
+            document.querySelector('.box').style.display="none";
+            document.querySelectorAll('.block').forEach((block)=>{
+                block.style.display = "block";
+            });
+            document.getElementById('event').innerText = event.key;
+            document.getElementById('keycode').innerText = event.keyCode;
+            document.getElementById('code').innerText =event.code;
+        })
+    </script>
+</body>
+</html>

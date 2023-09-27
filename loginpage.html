@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: steelblue;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+        div.container{
+            background-color: black;
+            opacity: 0.6;
+            padding: 2vw;
+            border-radius: 5px;
+            box-shadow: 1vw 1vw 1vw rgb(86, 84, 84);
+        }
+        div.container h1{
+            font-size: 3vw;
+            text-align: center;
+        }
+        div.control{
+            position: relative;
+            margin: 2.5vw;
+            width: 20vw;
+        }
+        div.control input{
+            
+            background: transparent;
+            border: 0;
+            border-bottom: 2px solid #fff;
+            width: 100%;
+            color: #fff;
+            display: block;
+            margin: 1vw 0;
+            padding: 0.5vw 0;
+            font-size: 1.5vw;
+        }
+        .control label span {
+            display: inline-block;
+            font-size: 18px;
+            min-width: 5px;
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        div.control input:focus,
+        div.control input:valid
+        {
+            background: none;
+            outline: none;
+            border-bottom-color: lightblue;
+        }
+        div.control label{
+            position: absolute;
+            top: 1vw;
+            left: 0;
+            pointer-events: none;
+            font-size: 1.5vw;
+            transition: 0.2s;
+        }
+        .control input:focus + label span,.control input:valid + label span
+        {
+            transform: translateY(-2.5vw);
+        }
+        button{
+            background-color: blue;
+            color: #fff;
+            width: 80%;
+            margin: 0 2.5vw;
+            border: none;
+            font-size: 1.8vw;
+            padding: 0.5vw 0;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        button:focus{
+            outline: none;
+        }
+        button:active{
+            transform: scale(0.98);
+        }
+        div.line{
+            margin: 2vw 2.5vw;
+            font-size: 1.3vw;
+        }
+        .line a {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>please login</h1>
+        <form action="">
+            <div class="control">
+                <input type="text" id="mail" required>
+                <label for="mail">Email</label>
+            </div>
+            <div class="control">
+                <input type="password" id="pass" required>
+                <label for="pass">Password</label>
+            </div>
+            <button id="btn">Login</button>
+            <div class="line">Don't have the account? <a href="#">Register</a></div>
+        </form>
+    </div>
+    <script>
+        const labels = document.querySelectorAll('.control label');
+
+        labels.forEach(label => {
+    label.innerHTML = label.innerText
+        .split('')
+        .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
+        .join('')
+})
+    </script>
+</body>
+</html>

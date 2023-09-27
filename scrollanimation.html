@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll animation</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background-color: aliceblue;
+            overflow-x: hidden;
+        }
+        div.box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            margin: 2vw;
+        }
+        div.content{
+            background-color: aqua;
+            margin: 1vw;
+            padding: 3vw 5vw;
+            border-radius: 10px;
+            box-shadow: 1vw 1vw 1vw black;
+            transform: translatex(400%);
+            transition: transform 0.4s ease;
+        }
+        .content:nth-of-type(even){
+            transform: translateX(-400%);
+        }
+        .content.show{
+            transform: translateX(0%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="line">
+            scroll to see the animation
+        </h1>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+        <div class="content"><h2>content</h2></div>
+    </div>
+    <script>
+        const box = document.querySelectorAll('.content');
+
+        window.addEventListener('scroll', checkBoxes);
+
+        checkBoxes();
+
+        function checkBoxes() {
+            const triggerBottom = window.innerHeight/5*4;
+
+            box.forEach(content => {
+            const boxTop = content.getBoundingClientRect().top;
+
+            if(boxTop < triggerBottom) {
+                content.classList.add('show')
+            } else {
+            content.classList.remove('show')
+            }
+    })
+}
+    </script>
+</body>
+</html>

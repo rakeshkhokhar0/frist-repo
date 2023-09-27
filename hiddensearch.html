@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>Hidden search</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            padding: 20vw;
+            overflow: hidden;
+            
+        }
+        div.search{
+            background-color: white;
+            position: relative;
+            height: 4vw;
+        }
+        input{
+            background-color: #fff;
+            border: 0;
+            font-size: 2vw;
+            padding: 15px;
+            height: 4vw;
+            width: 4vw;
+            transition: width 0.3s ease;
+        }
+        input.active{
+            width: 30vw;
+        }
+        input:focus{
+            outline: none;
+        }
+        button{
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            font-size: 2vw;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 4vw;
+            width: 4vw;
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="search" id="active" placeholder="search...">
+        <button id="icon">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+    <script>
+        const btn = document.getElementById('icon');
+        const display = document.getElementById("active");
+        btn.addEventListener('click',()=>{
+            display.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

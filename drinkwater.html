@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --fill-color: rgb(98, 219, 224);
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            width: 100vw;
+            overflow-x: hidden;
+            margin: 3vw 0;
+        }
+        div.container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 40%;
+        }
+        h1{
+            font-size: 3vw;
+            margin: 10px;
+            text-transform: capitalize;
+        }
+        div.goal{
+            margin: 10px;
+            font-size: 1.5vw;
+        }
+        div.goal-container{
+            height: 33vh;
+            width: 10vw;
+            color: blue;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            margin: 2vw 0;
+            flex-direction: column;
+            border: 4px solid blue;
+            border-radius:  0 0 40px 40px;
+            overflow: hidden;
+        }
+        div.line{
+            font-size: 1.5vw;
+            margin: 1vw;
+        }
+        div.glasses{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1vw 0;
+            width: 60%;
+        }
+        div.tub{
+            height: 15vh;
+            width: 4vw;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            color: blue;
+            font-weight: 400;
+            border-radius: 0 0 20px 20px;
+            border: 3px solid blue;
+            margin: 0.5vw;
+        }
+        .tub.full{
+            background-color: var(--fill-color);
+            color: #fff;
+        }
+        div.remained{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            height: 100%;
+            flex-direction: column;
+            text-align: center;
+            transition: 0.3s all;
+        }
+        div.remained span{
+            font-weight: bold;
+            font-size: 1.5vw;
+        }
+        div.remained small{
+            font-size: 1vw;
+        }
+        .percentage{
+            background-color: var(--fill-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.5vw;
+
+            justify-content: center;
+            font-weight: bold;
+            height: 0;
+            transition: 0.3s all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>drink water</h1>
+            <div class="goal">Goal: 2Liters</div>
+        </div>
+        <div class="goal-container" id="empty">
+            <div class="remained">
+                <span id="liters">2L</span>
+                <small>remained</small>
+            </div>
+            <div class="percentage" id="percent"></div>
+        </div>
+        <div class="line">select how many glasses of water that you have drink</div>
+        <div class="glasses">
+            <div class="tub">250 ML</div>
+            <div class="tub">250 ML</div>
+            <div class="tub">250 ML</div>
+            <div class="tub">250 ML</div>
+            <div class="tub">250 ML</div>
+            <div class="tub">250 ML</div>
+            <div class="tub">250 ML</div>
+            <div class="tub">250 ML</div>
+        </div>
+    </div>
+    <script>
+        const smallCups = document.querySelectorAll('.tub');
+        const percent = document.getElementById('percent');
+        const remain = document.querySelector('.remained');
+        const liter = document.getElementById('liters');
+        smallCups.forEach((element,idx)=>{
+            element.addEventListener('click',()=>highLightedcup(idx));
+        })
+        function highLightedcup(idx){
+            if(idx===7&& smallCups[idx].classList.contains('full')){
+                idx--;
+            }
+            else if(smallCups[idx].classList.contains('full')&&!smallCups[idx].nextElementSibling.classList.contains('full')){
+                idx--;
+            }
+            smallCups.forEach((element,idx1)=>{
+                if(idx1<=idx){
+                    element.classList.add('full');
+                }
+                else{
+                    element.classList.remove('full')
+                }
+            })
+            updateBigcup();
+        }
+        function updateBigcup(){
+            const size = document.querySelectorAll('.tub.full').length;
+            const totalsize = smallCups.length;
+            if(size === 0){
+                percent.style.visibility='hidden';
+                percent.style.height=0;
+            }
+            else{
+                percent.style.visibility='visible';
+                percent.style.height=`${(size/totalsize)*33}vh`
+                percent.innerText=`${size/totalsize*100}%`
+            }
+            if(size===totalsize){
+                remain.style.visibility='hidden';
+                remain.style.height=0;
+            } else {
+                remain.style.visibility = 'visible';
+                liter.innerText=`${2-(250*size)/1000}L`
+            }
+        }
+    </script>
+</body>
+</html>
